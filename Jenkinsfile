@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'sanketmahajan/mern-app'
+        DOCKER_IMAGE = 'sanketmahajan/nodeapp'
         SONAR_PROJECT = 'node-devsecops'
     }
 
