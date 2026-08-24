@@ -99,26 +99,19 @@ pipeline {
         }
 
         stage('Dependencies & Audit') {
-            steps {
-                sh '''
-                    npm ci
-                    npm audit --audit-level=high
-                '''
-            }
-        }
+    steps {
+        sh '''
+            npm ci
+            npm audit --audit-level=high
+        '''
+    }
+}
 
-        stage('Lint & Test') {
-            steps {
-                sh 'npm run lint'
-            }
-        }
-
-        stage('Server Build') {
-            steps {
-                 sh 'npm ci'
-                 sh 'npm run lint'
-            }
-        }
+stage('Lint & Test') {
+    steps {
+        sh 'npm run lint'
+    }
+}
 
         stage('Docker Build') {
             steps {
