@@ -4,7 +4,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'sanketmahajan/mern-app'
-        SONAR_PROJECT = 'react-devsecops'
+        SONAR_PROJECT = 'node-devsecops'
     }
 
     stages {
