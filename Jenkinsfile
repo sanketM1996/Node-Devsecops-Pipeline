@@ -113,9 +113,10 @@ pipeline {
             }
         }
 
-        stage('React Build') {
+        stage('Server Build') {
             steps {
-                sh 'npm run build'
+                 sh 'npm ci'
+                 sh 'npm run lint'
             }
         }
 
