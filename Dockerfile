@@ -5,10 +5,13 @@ WORKDIR /app
 COPY package*.json ./
 
 RUN npm ci --omit=dev && \
-    npm cache clean --force
+    npm cache clean --force && \
+    rm -rf /usr/local/lib/node_modules/npm
 
 COPY . .
 
+USER node
+
 EXPOSE 5000
 
-CMD ["npm", "start"]
+CMD ["node", "app.js"]
