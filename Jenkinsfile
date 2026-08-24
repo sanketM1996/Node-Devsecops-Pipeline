@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/sanketM1996/Npm-Devsecops-Pipeline.git'
+                    url: 'https://github.com/sanketM1996/Node-Devsecops-Pipeline.git'
 
                 script {
                     def commitId = sh(
